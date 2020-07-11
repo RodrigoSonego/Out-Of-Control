@@ -9,6 +9,12 @@ public class SceneChanger : MonoBehaviour
 
     public Image fadePanel;
 
+    private void Start()
+    {
+        print(SceneManager.GetSceneAt(0).isLoaded);
+    }
+
+
     public void ChangeScene()
     {
         int index = Random.Range(1, SceneManager.sceneCountInBuildSettings);
