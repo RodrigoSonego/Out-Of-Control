@@ -28,7 +28,8 @@ public class SceneChanger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine("fadeCoroutine");        
+        if (collision.CompareTag("Player"))
+            StartCoroutine("fadeCoroutine");        
     }
 
     private IEnumerator fadeCoroutine()

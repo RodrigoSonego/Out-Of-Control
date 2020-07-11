@@ -17,13 +17,16 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    
-    void FixedUpdate()
+
+    private void Update()
     {
         change = Vector2.zero;
         change.x = Input.GetAxis("Horizontal");
         change.y = Input.GetAxis("Vertical");
+    }
 
+    void FixedUpdate()
+    {        
         UpdateAnimation();
     }
 
