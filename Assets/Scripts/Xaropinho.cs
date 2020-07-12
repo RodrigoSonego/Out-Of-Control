@@ -26,6 +26,7 @@ public class Xaropinho : MonoBehaviour
 
     private void FixedUpdate()
     {
+        throwCooldown = Random.Range(1.5f, 2.5f);
         CheckDistanceToPlayer();
     }
 
