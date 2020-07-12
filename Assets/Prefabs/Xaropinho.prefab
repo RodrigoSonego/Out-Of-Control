@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c21dcf8f4f8a414a8badaae26a3dc84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cheese: {fileID: 4435811876573027587, guid: 9a4fc89e524a4ca4ca5bf05d61397157, type: 3}
+  cheese: {fileID: 4628934581638555161, guid: 0f1b2085f4e1a4544a899c12caf0452e, type: 3}
   cheeseSpawn: {fileID: 1102362462}
   detectionRadius: 5.6
   throwCooldown: 1.72
