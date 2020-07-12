@@ -8,6 +8,7 @@ public class SceneChanger : MonoBehaviour
 {
 
     public Image fadePanel;
+    public static int numberOfScenesLoaded;
 
     private void Start()
     {
@@ -17,13 +18,20 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene()
     {
+        if(numberOfScenesLoaded == 8)
+        {
+            //telafinal foda
+            return;
+        }
+
         int index = Random.Range(1, SceneManager.sceneCountInBuildSettings);
-        while (SceneManager.GetSceneByBuildIndex(index) == SceneManager.GetActiveScene())
+        Scene nextScene = SceneManager.GetSceneByBuildIndex(index);
+        while (nextScene == SceneManager.GetActiveScene() && nextScene.isLoaded)
         {
             index = Random.Range(1, SceneManager.sceneCountInBuildSettings);
         }
         SceneManager.LoadScene(index);
-
+        numberOfScenesLoaded++;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
