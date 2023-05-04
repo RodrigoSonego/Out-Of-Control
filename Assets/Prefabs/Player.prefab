@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.2
+  gameover: {fileID: 0}
 --- !u!95 &3998124976197627375
 Animator:
   serializedVersion: 3

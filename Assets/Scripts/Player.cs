@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour
     private Vector2 change;
     private Rigidbody2D rb;
     private Animator animator;
+    private bool dead;
+
+    public GameObject gameover;
 
     void Start()
     {
@@ -41,6 +45,15 @@ public class Player : MonoBehaviour
         } else
         {
           //  animator.SetBool("moving", false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            gameover.SetActive(true);       
+            gameObject.SetActive(false);
         }
     }
 }
